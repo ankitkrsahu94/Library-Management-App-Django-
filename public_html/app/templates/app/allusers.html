@@ -1,0 +1,57 @@
+{% extends "app/admin_profile.html" %}
+{% block request %}
+	<table id="example" class="display" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>Contact</th>
+				<th>Post</th>
+				<th>Member Since</th>
+				<th>Verified</th>
+				<th colspan="2">Action</th>
+			</tr>
+		</thead>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		
+		{% for item in response %}
+			<tr>
+				<td>{{ item.user.first_name }} </td>
+				<td>{{ item.contactNo }}</td>
+				<td>{% if item.membership_type == 'U' %}User{% else %}Admin{% endif %}</td>
+				<td>{{ item.member_since }}</td>
+				<td>{% if item.verified %}Yes{% else %}No{% endif %}</td>
+				<form action = '../edituser/' method = 'get'>					
+				{% csrf_token %}
+					<input type="hidden" name = 'username' value = '{{ item.user }}'/>
+					<td><input type='submit' name='edit' value = 'Edit'/></td>
+				</form>
+				<form action = '../deleteuser/' method = 'post'>					
+				{% csrf_token %}
+					<input type="hidden" name = 'username' value = '{{ item.user }}'/>
+					<td><input type='submit' name='del' value = 'Delete'/></td>
+				</form>
+			</tr>
+		{% endfor %}
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr>
+			<td colspan="8">
+				<form action = '../adduser/' method='get'>
+				{% csrf_token %}
+					<input type='submit' name='new' value = 'Add New User'/>
+				</form>
+			</td>
+		</tr>
+		
+	</table>
+
+{% endblock %}

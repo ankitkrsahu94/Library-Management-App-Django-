@@ -1,0 +1,114 @@
+{% extends "app/admin_profile.html" %}
+{% block request %}
+	<h3>New User</h3>
+	<form action = "" method = "post">
+	{% csrf_token %}
+			<table>
+				<tr>
+					
+						<div class = "register_div">
+							{% if user_form.username.errors %}<p class = "error">{{ user_form.username.errors }}</p>{% endif %}
+							<td>
+								<label for = "username" {% if user_form.username.errors %} class = "error" {% endif %}>Username:</label>
+							</td>
+							<td>{{ user_form.username }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if user_form.email.errors %}<p class = "error">{{ form.email.errors }}</p>{% endif %}
+							<td>
+								<label for = "email" {% if user_form.email.errors %} class = "error" {% endif %}>Email:</label>
+							</td>
+							<td>{{ user_form.email }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if user_form.password.errors %}<p class = "error">{{ user_form.password.errors }}</p>{% endif %}
+							<td>
+								<label for = "password" {% if user_form.password.errors %} class = "error" {% endif %}>Password:</label>
+							</td>
+							<td>{{ user_form.password }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+						<div class = "register_div">
+							{% if user_form.password1.errors %}<p class = "error">{{ user_form.password1.errors }}</p>{% endif %}
+							<td>
+								<label for = "password1" {% if user_form.password1.errors %} class = "error" {% endif %}>Verify Password:</label>
+							</td>
+							<td>{{ user_form.password1 }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if user_form.first_name.errors %}<p class = "error">{{ user_form.first_name.errors }}</p>{% endif %}
+							<td>
+								<label for = "first_name" {% if user_form.first_name.errors %} class = "error" {% endif %}>First Name:</label>
+							</td>
+							<td>{{ user_form.first_name }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if user_form.last_name.errors %}<p class = "error">{{ user_form.last_name.errors }}</p>{% endif %}
+							<td>
+								<label for = "last_name" {% if user_form.last_name.errors %} class = "error" {% endif %}>Last Name:</label>
+							</td>
+							<td>{{ user_form.last_name }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if profile_form.dob.errors %}<p class = "error">{{ profile_form.dob.errors }}</p>{% endif %}
+							<td>
+								<label for = "dob" {% if profile_form.last_name.errors %} class = "error" {% endif %}>Date of Birth:</label>
+							</td>
+							<td>{{ profile_form.dob }}</td>
+						</div>
+							<!--{{ user_form.as_p }}
+							{{ profile_form.as_p }}-->
+					
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if user.verified.errors %}<p class = "error">{{ user.verified.errors }}</p>{% endif %}
+						<td>Verified: </td>
+						<td>
+							<input type = "radio" value = 'T' name = 'verified' checked="checked">Yes
+							<input type = "radio" Value = 'F' name = 'verified'>No
+						</td>
+					</div>
+				</tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>
+					<td colspan="2"><input type = 'submit' value = 'Add'/></td>
+				</tr>
+			</table>
+
+					
+		
+		
+		
+		<!--if you wish to access first_name last_name of user then go like this,
+		user.get().first_name -->
+	</form>
+
+{% endblock %}

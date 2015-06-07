@@ -1,0 +1,53 @@
+{% extends 'app/admin_profile.html' %}
+{% block request %}
+	<table id="example" class="display" cellspacing="0" width="100%">
+		
+		<thead>
+			<tr>
+				
+				<th>ID</th>
+				<th>Title</th>
+				<th>Category</th>
+				<th>Total</th>
+				<th>Copies Available</th>
+				<th colspan="2">Action</th>
+			</tr>
+		</thead>
+		
+		
+		<tbody>			
+		
+		{% for item in response %}
+			
+			<tr>
+				<td>{{ item.isbn}} </td>
+				<td>{{ item.title }}</td>
+				<td>{{ item.category }}</td>
+				<td>{{ item.quantity }}</td>
+				<td>{{ item.available }}</td>
+				<form action = '../editbook/' method = 'get'>	
+				{% csrf_token %}
+					<input type="hidden" name = 'isbn' value = '{{ item.isbn }}'/>
+					<td><input type='submit' name='new' value = 'Edit'/></td>
+				</form>
+				<form action = '../deletebook/' method = 'post'>	
+				{% csrf_token %}
+					<input type="hidden" name = 'isbn' value = '{{ item.isbn }}'/>
+					<td><input type='submit' name='new' value = 'Delete'/></td>
+				</form>
+			</tr>
+		{% endfor %}
+		
+		
+			<tr>
+				<form action = '../addbook/' method='get'>
+				{% csrf_token %}
+					<td colspan="7"><input type='submit' name='new' value = 'Add New Book'/></td>
+				</form>
+				
+			</tr>
+			
+		</tbody>
+	</table>
+
+{% endblock %}

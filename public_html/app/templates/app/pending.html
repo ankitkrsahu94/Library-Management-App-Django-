@@ -1,0 +1,19 @@
+{% extends 'app/user_profile.html' %}
+{% block request %}
+	<table id="example" class="display" cellspacing="0" width="100%">
+		
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+			</tr>
+		</thead>
+		<tr></tr>
+		{% for item in response %}
+			<tr>
+				<td>{{ item.isbn}} </td>
+				<td>{{ item.title }}</td>
+			</tr>
+		{% endfor %}
+	</table>	
+{% endblock %}

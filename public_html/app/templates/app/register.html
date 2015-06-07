@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="form">
+	<form action = "" method = "post">
+	{% csrf_token %}
+		{% if user_form == True %}<p>You are successfully Registered. Go to <a href="/">Login</a> page.</p>
+		{% else %}
+			<div class = "register_div">
+				{% if user_form.username.errors %}<p class = "error">{{ user_form.username.errors }}</p>{% endif %}
+				<p><label for = "username" {% if user_form.username.errors %} class = "error" {% endif %}>Username:</label></p>
+				<p>{{ user_form.username }}</p>
+			</div>
+			<div class = "register_div">
+			{% if user_form.email.errors %}<p class = "error">{{ form.email.errors }}</p>{% endif %}
+			<p><label for = "email" {% if user_form.email.errors %} class = "error" {% endif %}>Email:</label></p>
+			<p>{{ user_form.email }}</p>
+		</div>
+			<div class = "register_div">
+			{% if user_form.password.errors %}<p class = "error">{{ user_form.password.errors }}</p>{% endif %}
+			<p><label for = "password" {% if user_form.password.errors %} class = "error" {% endif %}>Password:</label></p>
+			<p>{{ user_form.password }}</p>
+		</div>
+		<div class = "register_div">
+			{% if user_form.password1.errors %}<p class = "error">{{ user_form.password1.errors }}</p>{% endif %}
+			<p><label for = "password1" {% if user_form.password1.errors %} class = "error" {% endif %}>Verify Password:</label></p>
+			<p>{{ user_form.password1 }}</p>
+		</div>
+		<div class = "register_div">
+			{% if user_form.first_name.errors %}<p class = "error">{{ user_form.first_name.errors }}</p>{% endif %}
+			<p><label for = "first_name" {% if user_form.first_name.errors %} class = "error" {% endif %}>First Name:</label></p>
+			<p>{{ user_form.first_name }}</p>
+		</div>
+		<div class = "register_div">
+			{% if user_form.last_name.errors %}<p class = "error">{{ user_form.last_name.errors }}</p>{% endif %}
+			<p><label for = "last_name" {% if user_form.last_name.errors %} class = "error" {% endif %}>Last Name:</label></p>
+			<p>{{ user_form.last_name }}</p>
+		</div>
+		<div class = "register_div">
+			{% if profile_form.dob.errors %}<p class = "error">{{ profile_form.dob.errors }}</p>{% endif %}
+			<p><label for = "dob" {% if profile_form.last_name.errors %} class = "error" {% endif %}>Date of Birth:</label></p>
+			<p>{{ profile_form.dob }}</p>
+		</div>
+			<!--{{ user_form.as_p }}
+			{{ profile_form.as_p }}-->
+			<p><input type = 'submit' value = 'Register'/></p>	
+		{% endif %}
+		
+		
+		
+		<!--if you wish to access first_name last_name of user then go like this,
+		user.get().first_name -->
+	</form>
+</div>
+{% endblock %}

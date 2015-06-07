@@ -1,0 +1,104 @@
+{% extends "app/admin_profile.html" %}
+{% block request %}
+	<h3>New Book</h3>
+	<form action = "" method = "post">
+	{% csrf_token %}
+			<table>
+				<tr>
+					
+						<div class = "register_div">
+							{% if book_form.isbn.errors %}<p class = "error">{{ book_form.isbn.errors }}</p>{% endif %}
+							<td>
+								<label for = "isbn" {% if book_form.isbn.errors %} class = "error" {% endif %}>ISBN:</label>
+							</td>
+							<td>{{ book_form.isbn }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if book_form.title.errors %}<p class = "error">{{ form.title.errors }}</p>{% endif %}
+							<td>
+								<label for = "title" {% if book_form.title.errors %} class = "error" {% endif %}>Title:</label>
+							</td>
+							<td>{{ book_form.title }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if book_form.author.errors %}<p class = "error">{{ book_form.author.errors }}</p>{% endif %}
+							<td>
+								<label for = "author" {% if book_form.author.errors %} class = "error" {% endif %}>Author:</label>
+							</td>
+							<td>{{ book_form.author }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+						<div class = "register_div">
+							{% if book_form.pub_date.errors %}<p class = "error">{{ book_form.pub_date.errors }}</p>{% endif %}
+							<td>
+								<label for = "pub_date" {% if book_form.pub_date.errors %} class = "error" {% endif %}>Publication Date:</label>
+							</td>
+							<td>{{ book_form.pub_date }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if book_form.category.errors %}<p class = "error">{{ book_form.category.errors }}</p>{% endif %}
+							<td>
+								<label for = "first_name" {% if book_form.category.errors %} class = "error" {% endif %}>Category:</label>
+							</td>
+							<td>{{ book_form.category }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if book_form.quantity.errors %}<p class = "error">{{ book_form.quantity.errors }}</p>{% endif %}
+							<td>
+								<label for = "last_name" {% if book_form.quantity.errors %} class = "error" {% endif %}>Quantity:</label>
+							</td>
+							<td>{{ book_form.quantity }}</td>
+						</div>
+					
+				</tr>
+				<tr>
+					
+						<div class = "register_div">
+							{% if profile_form.available.errors %}<p class = "error">{{ profile_form.available.errors }}</p>{% endif %}
+							<td>
+								<label for = "dob" {% if profile_form.available.errors %} class = "error" {% endif %}>Available:</label>
+							</td>
+							<td>{{ book_form.available }}</td>
+						</div>
+							<!--{{ book_form.as_p }}
+							{{ profile_form.as_p }}-->
+					
+				</tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>
+					<td colspan="2"><input type = 'submit' value = 'Add'/></td>
+				</tr>
+			</table>
+
+					
+		
+		
+		
+		<!--if you wish to access first_name last_name of user then go like this,
+		user.get().first_name -->
+	</form>
+
+{% endblock %}

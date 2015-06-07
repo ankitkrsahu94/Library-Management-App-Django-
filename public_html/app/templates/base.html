@@ -1,0 +1,53 @@
+<html>
+	<head>
+		{% load staticfiles %}
+		<!--boot strap-->
+		<script type="text/javascript" charset="utf8" src="{% static 'app/bootstrap.min.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'app/bootstrap.min.css' %}">
+
+		<link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
+		<!-- DataTables CSS -->
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+		  
+		<!-- jQuery -->
+		<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+		  
+		<!-- DataTables -->
+		<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+
+
+		<script type="text/javascript" charset="utf-8">
+            $(document).ready(function() {
+                $('#example').DataTable();
+            } );
+        </script>
+		{% block extrahead %}{% endblock %}
+	</head>
+
+	<body>
+		<div id="pageContainer">
+			<div id="header">
+				{% block login %}
+				{% endblock %}
+				<div id="wall">
+					<img src = "{% static 'app/images/wall.jpg' %}" height="100%" width="100%">
+				</div>
+			</div>
+			<div id="content">
+				{% block content %}
+				{% endblock %}
+			</div>
+			<div id="footer">
+				<h4>Site Developed By:-</h4>
+				<p>Ankit Kr. Sahu</p>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+
+
+
+

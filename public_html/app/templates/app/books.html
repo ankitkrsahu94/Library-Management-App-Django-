@@ -1,0 +1,40 @@
+{% extends 'app/user_profile.html' %}
+{% block request %}
+	<table id="example" class="display" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+				<td></td>
+				<td>ID</td>
+				<td>Title</td>
+				<td>Category</td>
+				<td>Total</td>
+				<td>Copies Available</td>
+			</tr>
+		</thead>
+		<tr></tr>
+		<tr></tr>
+		<form action = '../request_issue/' method = 'get'>
+		{% csrf_token %}	
+		{% for item in response %}
+			<tr>
+				<td><input type = 'checkbox' name = 'books' value = '{{ item }}'/></td>
+				<td>{{ item.isbn}} </td>
+				<td>{{ item.title }}</td>
+				<td>{{ item.category }}</td>
+				<td>{{ item.quantity }}</td>
+				<td>{{ item.available }}</td>
+			</tr>
+		{% endfor %}
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr>
+			<td colspan="6"><input type='submit' value = 'Request to Issue'/></td>
+			
+		</tr>
+		</form>
+	</table>	
+{% endblock %}

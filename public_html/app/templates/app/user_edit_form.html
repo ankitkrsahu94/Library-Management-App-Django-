@@ -1,0 +1,99 @@
+{% extends "app/admin_profile.html" %}
+{% block request %}
+	
+		<form action = "../updateuser/" method = "post">
+		{% csrf_token %}
+			<table border = 1>
+				<tr>
+					<input type="hidden" name = 'oldusername' value = '{{ lib_user.username }}'/>
+					<div class = "register_div">
+						{% if lib_user.username.errors %}<p class = "error">{{ lib_user.username.errors }}</p>{% endif %}
+						<td>Old UserName:</td>
+						<td>
+							{{ lib_user.username }}
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if lib_user.username.errors %}<p class = "error">{{ lib_user.username.errors }}</p>{% endif %}
+						<td>New UserName:</td>
+						<td>
+							<input type = "text"  value = '{{ lib_user.username }}' name = 'username' />
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if lib_user.email.errors %}<p class = "error">{{ form.email.errors }}</p>{% endif %}
+						<td>Email: </td>
+						<td>
+							<input type = "text"  value = '{{ lib_user.email }}'name = 'email' />
+						</td>
+					</div>
+				</tr>
+				<tr>						
+					<div class = "register_div">
+						{% if member.contactNo.errors %}<p class = "error">{{ member.contactNo.errors }}</p>{% endif %}
+						<td>Contact No: </td>
+						<td>
+							<input type = "text" value = '{{ member.contactNo }}' name = 'contactNo' />
+						</td>
+					</div>
+				</tr>
+				<tr>						
+					<div class = "register_div">
+						{% if lib_user.first_name.errors %}<p class = "error">{{ lib_user.first_name.errors }}</p>{% endif %}
+						<td>First Name: </td>
+						<td>
+							<input type = "text" value = '{{ lib_user.first_name }}' name = 'first_name' />
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if lib_user.last_name.errors %}<p class = "error">{{ lib_user.last_name.errors }}</p>{% endif %}
+						<td>Last Name: </td>
+						<td>
+							<input type = "text"  value = '{{ lib_user.last_name }}' name = 'last_name' />
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if lib_user.verified.errors %}<p class = "error">{{ lib_user.verified.errors }}</p>{% endif %}
+						<td>Verified: </td>
+						<td>
+							<input type = "radio" value = 'T' name = 'verified' checked="checked">Yes
+							<input type = "radio" Value = 'F' name = 'verified'>No
+						</td>
+					</div>
+				</tr>
+				<!--tr>
+					<div class = "register_div">
+						{% if profile_form.dob.errors %}<p class = "error">{{ profile_form.dob.errors }}</p>{% endif %}
+						<td>Date of Birth: </td>
+						<td>
+							<input type = "date"  value = '{{ member.dob }}' name = 'dob' />
+						</td>
+					</div>
+				</tr-->
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>
+					<td colspan="2"><input type = 'submit' value = 'Update'/></td>
+				</tr>	
+			</table>
+				<!--{{ lib_user.as_p }}
+				{{ profile_form.as_p }}-->
+			
+			<!--if you wish to access first_name last_name of user then go like this,
+			lib_user.get().first_name -->
+		</form>
+	
+	
+{% endblock %}

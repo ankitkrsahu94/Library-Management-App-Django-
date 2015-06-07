@@ -1,0 +1,82 @@
+[Wed Jun 03 07:40:37.947034 2015] [:error] [pid 24136] [client 127.0.0.1:39402] mod_wsgi (pid=24136): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:40:37.947098 2015] [:error] [pid 24136] [client 127.0.0.1:39402] Traceback (most recent call last):
+[Wed Jun 03 07:40:37.947127 2015] [:error] [pid 24136] [client 127.0.0.1:39402]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:40:37.947223 2015] [:error] [pid 24136] [client 127.0.0.1:39402]     self.load_middleware()
+[Wed Jun 03 07:40:37.947236 2015] [:error] [pid 24136] [client 127.0.0.1:39402]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:40:37.947350 2015] [:error] [pid 24136] [client 127.0.0.1:39402]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:40:37.947364 2015] [:error] [pid 24136] [client 127.0.0.1:39402]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:40:37.947424 2015] [:error] [pid 24136] [client 127.0.0.1:39402]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:40:37.947444 2015] [:error] [pid 24136] [client 127.0.0.1:39402] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:41:07.342771 2015] [:error] [pid 24134] [client 127.0.0.1:39461] mod_wsgi (pid=24134): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:41:07.342834 2015] [:error] [pid 24134] [client 127.0.0.1:39461] Traceback (most recent call last):
+[Wed Jun 03 07:41:07.342855 2015] [:error] [pid 24134] [client 127.0.0.1:39461]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:41:07.342961 2015] [:error] [pid 24134] [client 127.0.0.1:39461]     self.load_middleware()
+[Wed Jun 03 07:41:07.342974 2015] [:error] [pid 24134] [client 127.0.0.1:39461]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:41:07.343062 2015] [:error] [pid 24134] [client 127.0.0.1:39461]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:41:07.343074 2015] [:error] [pid 24134] [client 127.0.0.1:39461]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:41:07.343122 2015] [:error] [pid 24134] [client 127.0.0.1:39461]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:41:07.343140 2015] [:error] [pid 24134] [client 127.0.0.1:39461] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:42:52.930460 2015] [:error] [pid 24138] [client 127.0.0.1:39512] mod_wsgi (pid=24138): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:42:52.930524 2015] [:error] [pid 24138] [client 127.0.0.1:39512] Traceback (most recent call last):
+[Wed Jun 03 07:42:52.930544 2015] [:error] [pid 24138] [client 127.0.0.1:39512]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:42:52.930653 2015] [:error] [pid 24138] [client 127.0.0.1:39512]     self.load_middleware()
+[Wed Jun 03 07:42:52.930665 2015] [:error] [pid 24138] [client 127.0.0.1:39512]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:42:52.930754 2015] [:error] [pid 24138] [client 127.0.0.1:39512]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:42:52.930765 2015] [:error] [pid 24138] [client 127.0.0.1:39512]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:42:52.930813 2015] [:error] [pid 24138] [client 127.0.0.1:39512]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:42:52.930839 2015] [:error] [pid 24138] [client 127.0.0.1:39512] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:45:22.147777 2015] [:error] [pid 24136] [client 127.0.0.1:39599] mod_wsgi (pid=24136): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:45:22.147883 2015] [:error] [pid 24136] [client 127.0.0.1:39599] Traceback (most recent call last):
+[Wed Jun 03 07:45:22.147934 2015] [:error] [pid 24136] [client 127.0.0.1:39599]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:45:22.147997 2015] [:error] [pid 24136] [client 127.0.0.1:39599]     self.load_middleware()
+[Wed Jun 03 07:45:22.148036 2015] [:error] [pid 24136] [client 127.0.0.1:39599]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:45:22.148106 2015] [:error] [pid 24136] [client 127.0.0.1:39599]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:45:22.148143 2015] [:error] [pid 24136] [client 127.0.0.1:39599]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:45:22.148203 2015] [:error] [pid 24136] [client 127.0.0.1:39599]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:45:22.148264 2015] [:error] [pid 24136] [client 127.0.0.1:39599] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:45:31.878158 2015] [:error] [pid 24134] [client 127.0.0.1:39601] mod_wsgi (pid=24134): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:45:31.878205 2015] [:error] [pid 24134] [client 127.0.0.1:39601] Traceback (most recent call last):
+[Wed Jun 03 07:45:31.878231 2015] [:error] [pid 24134] [client 127.0.0.1:39601]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:45:31.878266 2015] [:error] [pid 24134] [client 127.0.0.1:39601]     self.load_middleware()
+[Wed Jun 03 07:45:31.878278 2015] [:error] [pid 24134] [client 127.0.0.1:39601]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:45:31.878296 2015] [:error] [pid 24134] [client 127.0.0.1:39601]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:45:31.878304 2015] [:error] [pid 24134] [client 127.0.0.1:39601]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:45:31.878319 2015] [:error] [pid 24134] [client 127.0.0.1:39601]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:45:31.878339 2015] [:error] [pid 24134] [client 127.0.0.1:39601] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:45:36.433281 2015] [:error] [pid 24138] [client 127.0.0.1:39602] mod_wsgi (pid=24138): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:45:36.433330 2015] [:error] [pid 24138] [client 127.0.0.1:39602] Traceback (most recent call last):
+[Wed Jun 03 07:45:36.433361 2015] [:error] [pid 24138] [client 127.0.0.1:39602]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:45:36.433406 2015] [:error] [pid 24138] [client 127.0.0.1:39602]     self.load_middleware()
+[Wed Jun 03 07:45:36.433424 2015] [:error] [pid 24138] [client 127.0.0.1:39602]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:45:36.433453 2015] [:error] [pid 24138] [client 127.0.0.1:39602]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:45:36.433468 2015] [:error] [pid 24138] [client 127.0.0.1:39602]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:45:36.433507 2015] [:error] [pid 24138] [client 127.0.0.1:39602]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:45:36.433533 2015] [:error] [pid 24138] [client 127.0.0.1:39602] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:46:02.697265 2015] [:error] [pid 24216] [client 127.0.0.1:39609] mod_wsgi (pid=24216): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:46:02.697321 2015] [:error] [pid 24216] [client 127.0.0.1:39609] Traceback (most recent call last):
+[Wed Jun 03 07:46:02.697346 2015] [:error] [pid 24216] [client 127.0.0.1:39609]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:46:02.697483 2015] [:error] [pid 24216] [client 127.0.0.1:39609]     self.load_middleware()
+[Wed Jun 03 07:46:02.697500 2015] [:error] [pid 24216] [client 127.0.0.1:39609]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:46:02.697635 2015] [:error] [pid 24216] [client 127.0.0.1:39609]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:46:02.697665 2015] [:error] [pid 24216] [client 127.0.0.1:39609]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:46:02.697764 2015] [:error] [pid 24216] [client 127.0.0.1:39609]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:46:02.697793 2015] [:error] [pid 24216] [client 127.0.0.1:39609] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:46:06.707912 2015] [:error] [pid 24217] [client 127.0.0.1:39610] mod_wsgi (pid=24217): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:46:06.707953 2015] [:error] [pid 24217] [client 127.0.0.1:39610] Traceback (most recent call last):
+[Wed Jun 03 07:46:06.707969 2015] [:error] [pid 24217] [client 127.0.0.1:39610]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:46:06.708055 2015] [:error] [pid 24217] [client 127.0.0.1:39610]     self.load_middleware()
+[Wed Jun 03 07:46:06.708066 2015] [:error] [pid 24217] [client 127.0.0.1:39610]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:46:06.708151 2015] [:error] [pid 24217] [client 127.0.0.1:39610]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:46:06.708160 2015] [:error] [pid 24217] [client 127.0.0.1:39610]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:46:06.708207 2015] [:error] [pid 24217] [client 127.0.0.1:39610]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:46:06.708223 2015] [:error] [pid 24217] [client 127.0.0.1:39610] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 07:47:02.042476 2015] [:error] [pid 24394] [client 127.0.0.1:39653] mod_wsgi (pid=24394): Exception occurred processing WSGI script '/home/ankit/www/library_site/public_html/apache/django.wsgi'.
+[Wed Jun 03 07:47:02.042520 2015] [:error] [pid 24394] [client 127.0.0.1:39653] Traceback (most recent call last):
+[Wed Jun 03 07:47:02.042537 2015] [:error] [pid 24394] [client 127.0.0.1:39653]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed Jun 03 07:47:02.042623 2015] [:error] [pid 24394] [client 127.0.0.1:39653]     self.load_middleware()
+[Wed Jun 03 07:47:02.042634 2015] [:error] [pid 24394] [client 127.0.0.1:39653]   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 45, in load_middleware
+[Wed Jun 03 07:47:02.042731 2015] [:error] [pid 24394] [client 127.0.0.1:39653]     mw_class = import_by_path(middleware_path)
+[Wed Jun 03 07:47:02.042741 2015] [:error] [pid 24394] [client 127.0.0.1:39653]   File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+[Wed Jun 03 07:47:02.042789 2015] [:error] [pid 24394] [client 127.0.0.1:39653]     error_prefix, module_path, class_name))
+[Wed Jun 03 07:47:02.042806 2015] [:error] [pid 24394] [client 127.0.0.1:39653] ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[Wed Jun 03 13:33:46.431272 2015] [:error] [pid 26877] [client 127.0.0.1:39989] PHP Warning:  POST Content-Length of 15509424 bytes exceeds the limit of 8388608 bytes in Unknown on line 0, referer: http://localhost/phpmyadmin/sql.php

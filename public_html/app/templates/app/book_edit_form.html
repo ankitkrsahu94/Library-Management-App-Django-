@@ -1,0 +1,113 @@
+{% extends "app/admin_profile.html" %}
+{% block request %}
+	
+		<form action = "../updatebook/" method = "post">
+		{% csrf_token %}
+			<table border = 1>
+				<tr>
+					<div class = "register_div">
+						<input type='hidden' name = 'oldisbn' value = '{{ book.isbn }}' />
+						{% if book.isbn.errors %}<p class = "error">{{ book.title.errors }}</p>{% endif %}
+						<td>Old ISBN:</td>
+						<td>
+							{{ book.isbn }}
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if book.isbn.errors %}<p class = "error">{{ book.title.errors }}</p>{% endif %}
+						<td>New ISBN:</td>
+						<td>
+							<input type = "text"  value = '{{ book.isbn }}' name = 'isbn' />
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if book.title.errors %}<p class = "error">{{ book.title.errors }}</p>{% endif %}
+						<td>Title: </td>
+						<td>
+							<input type = "text"  value = '{{ book.title }}'name = 'title' />
+						</td>
+					</div>
+				</tr>
+				<tr>						
+					<div class = "register_div">
+						{% if book.author.errors %}<p class = "error">{{ book.author.errors }}</p>{% endif %}
+						<td>Author: </td>
+						<td>
+							<input type = "text" value = '{{ book.author }}' name = 'author' />
+						</td>
+					</div>
+				</tr>
+				<tr>						
+					<div class = "register_div">
+						{% if book.pub_date.errors %}<p class = "error">{{ book.pub_date.errors }}</p>{% endif %}
+						<td>Publication Date: </td>
+						<td>
+							<input type = "text" value = '{{ book.pub_date }}' name = 'pub_date' />
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if book.category.errors %}<p class = "error">{{ book.category.errors }}</p>{% endif %}
+						<td>Category: </td>
+						<td>
+							<select name = 'category'>
+								<option value = 'A'>Adventure</option>
+								<option value = 'R'>Romance</option>
+								<option value = 'F'>Fiction</option>
+								<option value = 'E'>Educational</option>
+								<option value = '{{ book.category }}' selected='selected'>{{ book.category }}</option>
+							</select>
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if book.quantity.errors %}<p class = "error">{{ book.quantity.errors }}</p>{% endif %}
+						<td>Quantity: </td>
+						<td>
+							<input type = "text"  value = '{{ book.quantity }}' name = 'quantity' />
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<div class = "register_div">
+						{% if book.available.errors %}<p class = "error">{{ book.available.errors }}</p>{% endif %}
+						<td>Available: </td>
+						<td>
+							<input type = "text"  value = '{{ book.available }}' name = 'available' />
+						</td>
+					</div>
+				</tr>
+				<!--tr>
+					<div class = "register_div">
+						{% if profile_form.dob.errors %}<p class = "error">{{ profile_form.dob.errors }}</p>{% endif %}
+						<td>Date of Birth: </td>
+						<td>
+							<input type = "date"  value = '{{ member.dob }}' name = 'dob' />
+						</td>
+					</div>
+				</tr-->
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>
+					<td colspan="2"><input type = 'submit' value = 'Update'/></td>
+				</tr>	
+			</table>
+				<!--{{ book.as_p }}
+				{{ profile_form.as_p }}-->
+			
+			<!--if you wish to access first_name last_name of book then go like this,
+			book.get().first_name -->
+		</form>
+	
+	
+{% endblock %}

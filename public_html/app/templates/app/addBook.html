@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="form">
+	<form action = "" method = "post">
+	{% csrf_token %}
+		{% if result == 'bookadded' %}<p>You are successfully Registered. Go to <a href="/">Login</a> page.</p>
+		{% else %}
+			<div class = "register_div">
+				<p><label for = "isbn">ISBN:</label></p>
+				<p>{{ form.isbn }}</p>
+			</div>
+			<div class = "register_div">
+				<p><label for = "title">Title:</label></p>
+				<p>{{ form.title }}</p>
+			</div>
+			<div class = "register_div">
+				<p><label for = "author">Author:</label></p>
+				<p>{{ form.author }}</p>
+			</div>
+			<div class = "register_div">
+				{% if book_form.pub_date.errors %}<p class = "error">{{ book_form.pub_date.errors }}</p>{% endif %}
+				<p><label for = "pub_date" {% if book_form.pub_date.errors %} class = "error" {% endif %}>Publication Date:</label></p>
+				<p>{{ form.pub_date }}</p>
+			</div>
+			<div class = "register_div">
+				{% if book_form.category.errors %}<p class = "error">{{ book_form.category.errors }}</p>{% endif %}
+				<p><label for = "category" {% if book_form.category.errors %} class = "error" {% endif %}>Category:</label></p>
+				<p>{{ form.category }}</p>
+			</div>
+			<div class = "register_div">
+				<p><label for = "quantity" >Quantity:</label></p>
+				<p>{{ form.quantity }}</p>
+			</div>
+			<div class = "register_div">
+				<p><label for = "available" >Available:</label></p>
+				<p>{{ form.available }}</p>
+			</div>
+				<!--{{ book_form.as_p }}
+				{{ profile_form.as_p }}-->
+				<p><input type = 'submit' value = 'Save'/></p>	
+		{% endif %}
+		
+		
+		
+		<!--if you wish to access first_name last_name of user then go like this,
+		user.get().first_name -->
+	</form>
+</div>
+{% endblock %}

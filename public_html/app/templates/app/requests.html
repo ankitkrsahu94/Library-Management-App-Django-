@@ -1,0 +1,45 @@
+{% extends "app/admin_profile.html" %}
+{% block request %}
+	<table border = 1>
+		<tr>
+			<th>User</th>
+			<th>Requested Title</th>
+			<th>ISBN</th>
+			<th colspan="2">Action</th>
+		</tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		
+		{% for item,book in response %}
+			<tr>
+				<td>{{ item.user_id.user.first_name }} </td>
+				<td>{{ book.title }}</td>
+				<td >{{ book.isbn }}</td>
+				
+				<form action = '../discard_request/' method = 'post'>					
+				{% csrf_token %}
+					<input type="hidden" name = 'id' value = "{{ item.id }}"/>
+					<td><input type='submit' name='discard' value = 'Discard'/></td>
+				</form>
+				<form action = '../approve_request/' method = 'post'>					
+				{% csrf_token %}
+					<input type="hidden" name = 'id' value = '{{ item.id }}'/>
+					<td><input type='submit' name='approve' value = 'Approve'/></td>
+				</form>
+			</tr>
+		{% endfor %}
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+
+		
+	</table>
+
+{% endblock %}

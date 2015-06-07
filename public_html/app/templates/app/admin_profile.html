@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block login %}
+	<div id="xyz">
+		<a href="../../logout">Logout</a>
+	</div>
+{% endblock %}
+{% block content %}
+	<div id="left">
+		<table>
+			<tr>
+				<td>Important Links</td>
+			</tr>
+			<tr>
+			</tr>
+
+			<tr>
+				<td><a href="../home/">Home</a></td>
+			</tr>
+
+			<tr>
+				<td><a href="../books/">Books</a></td>
+			</tr>
+			<tr>
+				<td><a href="../users/">Users</a></td>
+			</tr>
+			<tr>
+				<td><a href="../process_requests/">Requests</a></td>
+			</tr>
+		</table>
+	</div>
+	<div id="spare">
+		<h4>Welcome to Library, {{ user.first_name }}</h4>
+		{% block request %}
+		{% endblock %}
+
+	</div>
+	
+{% endblock %}
